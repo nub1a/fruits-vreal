@@ -1,12 +1,12 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React, {memo} from 'react';
 import {ROUTES} from '../../constants/constants';
-import {MainTabNavigator} from '../tabNavigators/MainTabNavigator';
+import {BottomTabNavigator} from '../tabNavigators/BottomTabNavigator';
 import {AuthNavigator} from './AuthNavigator';
 
 export type MainStackParamList = {
   [ROUTES.AuthNavigator]: undefined;
-  [ROUTES.MainTabNavigator]: undefined;
+  [ROUTES.BottomTabNavigator]: undefined;
 };
 
 const Stack = createStackNavigator<MainStackParamList>();
@@ -20,11 +20,12 @@ export const MainNavigator = memo(() => {
           cardStyle: {
             backgroundColor: '#fff',
           },
+          animationEnabled: false,
         }}>
         <Stack.Screen name={ROUTES.AuthNavigator} component={AuthNavigator} />
         <Stack.Screen
-          name={ROUTES.MainTabNavigator}
-          component={MainTabNavigator}
+          name={ROUTES.BottomTabNavigator}
+          component={BottomTabNavigator}
         />
       </Stack.Group>
     </Stack.Navigator>

@@ -8,10 +8,14 @@ export const IS_ANDROID = Platform.OS === 'android';
 
 export enum ROUTES {
   AuthNavigator = 'AuthNavigator',
+  BottomTabNavigator = 'BottomTabNavigator',
+  CartNavigator = 'CartNavigator',
   SignIn = 'SignIn',
   SignUp = 'SignUp',
   Onboarding = 'Onboarding',
-  MainTabNavigator = 'MainTabNavigator',
   Home = 'Home',
   Settings = 'Settings',
+  Notifications = 'Notifications',
+  Cart = 'Cart',
+  Shop = 'Shop',
 }

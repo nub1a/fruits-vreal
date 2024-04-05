@@ -14,7 +14,10 @@ export const SliderDots = memo(({onDotPress, count, activeIndex}: Props) => (
       {Array(count)
         .fill(null)
         .map((_, index) => (
-          <TouchableOpacity onPress={() => onDotPress(index)} activeOpacity={1}>
+          <TouchableOpacity
+            key={index.toString()}
+            onPress={() => onDotPress(index)}
+            activeOpacity={1}>
             <Box
               h="16px"
               w="16px"

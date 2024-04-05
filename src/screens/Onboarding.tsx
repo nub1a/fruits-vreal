@@ -9,11 +9,11 @@ import {
   NativeSyntheticEvent,
   FlatList as RFlatList,
 } from 'react-native';
-import {DEVICE_WIDTH, ROUTES} from '../constants/constants';
-import {MainStackParamList} from '../navigation/navigators/MainNavigator';
+import {OnboardingButton} from '../components/OnboardingButton';
 import {OnboardingSliderRenderItem} from '../components/OnboardingSliderRenderItem';
 import {SliderDots} from '../components/SliderDots';
-import {OnboardingButton} from '../components/OnboardingButton';
+import {DEVICE_WIDTH, ROUTES} from '../constants/constants';
+import {MainStackParamList} from '../navigation/navigators/MainNavigator';
 
 interface Slide {
   id: number;
@@ -83,7 +83,7 @@ export const Onboarding = memo(() => {
       return;
     }
 
-    navigate(ROUTES.MainTabNavigator);
+    navigate(ROUTES.BottomTabNavigator);
   }, [navigate, sliderActiveIndex]);
 
   return (
@@ -100,6 +100,7 @@ export const Onboarding = memo(() => {
           data={slides}
           renderItem={renderItem}
           showsHorizontalScrollIndicator={false}
+          keyExtractor={item => item.id.toString()}
           flexGrow={0}
         />
         <SliderDots

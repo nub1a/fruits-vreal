@@ -7,11 +7,20 @@ export const Text = {
     flexShrink: 1,
   },
   variants: {
+    'title/20': {
+      fontSize: '20',
+      fontWeight: 700,
+      lineHeight: '30px',
+    },
     'title/25': {
       fontSize: '25',
-      fontFamily: 'bold',
       fontWeight: 700,
       lineHeight: '30.5px',
+    },
+    'title/32': {
+      fontSize: '32',
+      fontWeight: 700,
+      lineHeight: '37.5px',
     },
   },
 };
